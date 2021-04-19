@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="./public/style.css" />
+
+    <title>Search Bar for info usign VIN number.</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="search__group">
+        <div class="input-group m-3">
+          <input
+            type="text"
+            id="searchBar"
+            class="form-control shadow-none"
+            placeholder="Enter valid VIN number"
+            aria-label="Enter valid VIN number"
+            aria-describedby="button-addon2"
+          />
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button" id="searchBtn">
+              <img src="./public/search.svg" /> Search
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="result_data">
+      <table class="table" id="table1"></table>
+      </div>
+    </div>
+
+    <script src="public/search.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+.search__group {
+    width: 70% !important;
+    margin: 2em auto;
+}
+
+.input-group {
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 0.5em 1em;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+}
+
+.input-group input {
+    border: 0;
+    outline: none;
+}
+
+#searchBtn {
+    border-radius: 2em;
+    padding: 0.5em 1.3em 0.5em 1em;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+}
+
+.result_data {
+    width: 80%;
+    margin: 1em auto;
+}
+
+thead {
+    text-align: center;
+}
