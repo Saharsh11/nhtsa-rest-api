@@ -2,9 +2,9 @@
   "name": "nhtsa-express-api",
   "version": "1.0.0",
   "description": "build a RESTful API that retrieves information from NHTSA and presents it to the user.",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node index.js",
     "test": "mocha --exit"
   },
   "jest": {

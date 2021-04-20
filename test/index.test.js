@@ -2,7 +2,7 @@ const assert = require('assert')
 const expect = require('chai').expect
 const request = require('supertest')
 
-const app = require('../app')
+const app = require('../index')
 
 describe('Unit Tests for calls without parameters', function() {
     
