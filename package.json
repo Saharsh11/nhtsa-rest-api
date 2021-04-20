@@ -4,7 +4,7 @@
   "description": "build a RESTful API that retrieves information from NHTSA and presents it to the user.",
   "main": "app.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node app.js",
     "test": "mocha --exit"
   },
   "jest": {
