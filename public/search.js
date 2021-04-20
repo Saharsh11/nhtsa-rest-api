@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 let rawOutput = [];
 const loadCharacters = async() => {
     const searchVin = document.getElementById("searchBar");
@@ -6,6 +8,9 @@ const loadCharacters = async() => {
         "https://vpic.nhtsa.dot.gov/api//vehicles/DecodeVin/" + vin + "?format=json"
     ).then((r) => r.json());
 
+if (false) {
+    
+} else {
     let output = {};
     // let noNull = [];
     for (i = 0; i < outcome.Results.length; i++) {
@@ -13,6 +18,7 @@ const loadCharacters = async() => {
     }
     output = onlyValidOutput(output);
     show(output, vin)
+}
 };
 
 const onlyValidOutput = (obj) => {
@@ -56,5 +62,4 @@ function show(data, vin) {
 document.getElementById("searchBtn").addEventListener("click", function() {
     loadCharacters();
     const searchVin = document.getElementById("searchBar");
-    document.getElementById("hi").innerHTML = searchVin.value;
 });

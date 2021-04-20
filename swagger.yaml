@@ -55,6 +55,12 @@ paths:
             type: "object"
             items:
               $ref: "#/definitions/manufacturer_list"
+        "400":
+          description: "Bad Request"
+          schema:
+            type: "object"
+            items:
+              $ref: "#/definitions/err_object"
   /manufacturers/vin/{vin_number}:
     get:
       tags:
@@ -77,6 +83,12 @@ paths:
             type: "object"
             items:
               $ref: "#/definitions/vin_details"
+        "400":
+          description: "Bad Request"
+          schema:
+            type: "object"
+            items:
+              $ref: "#/definitions/err_object"
   /manufacturers/Validate_vin/{vin}:
     get:
       tags:
@@ -96,13 +108,15 @@ paths:
         "200":
           description: "OK"
           schema:
-            type: "string"
-            items: "VIN Valid!"
-          "300":
-          description: "Multiple Choices"
+            type: "object"
+            items:
+              $ref: "#/definitions/success_object"
+        "400":
+          description: "Bad Request"
           schema:
-            type: "string"
-            items: "VIN InValid!"
+            type: "object"
+            items:
+              $ref: "#/definitions/err_object"
 definitions:
   manufacturer_list:
     type: "object"
@@ -113,14 +127,24 @@ definitions:
       Manufacturers List:
         type: "string"
         example: "[]"
-      xml:
-        name: "manufacturer_list"
+
   vin_details:
     type: "object"
     properties:
       3N1AB6AP7BL729215:
         type: "string"
         example: "[2011 NISSAN Sentra]"
-      xml:
-        name: "vin_details"
-        
+
+  err_object:
+    type: "object"
+    properties:
+      Result:
+        type: "string"
+        example: "Bad Request"
+
+  success_object:
+    type: "object"
+    properties:
+      Result:
+        type: "string"
+        example: "VIN Valid!"
